@@ -1,0 +1,150 @@
+.btn-start,
+.quiz-box,
+.score-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.quiz-box.active,
+.score-box.active {
+  opacity: 1;
+  pointer-events: auto;
+
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.quiz-box,
+.score-box {
+  width: 550px;
+
+  transform: translate(-50%, -50%) scale(0.7);
+  transition: all 0.3s ease;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.quiz-box header .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.quiz-box .question-text {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.quiz-box .option-list {
+  padding: 18px 0;
+}
+
+.quiz-box .option-list .option {
+  border: 1px solid #151d3b;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quiz-box .option-list .option:hover {
+  color: #112b2c;
+  background: #ffd33d;
+}
+
+.quiz-box .option-list .option.correct {
+  color: #155724;
+  background: #d4edda;
+}
+
+.quiz-box .option-list .option.incorrect {
+  color: #721c24;
+  background: #f8d7da;
+}
+
+.quiz-box .option-list .option.disabled {
+  pointer-events: none;
+}
+
+.quiz-box .next-btn {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+  transition: all 0.1s ease-in;
+}
+
+.quiz-box .next-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score-box {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  text-align: center;
+  padding: 25px;
+}
+
+.score-box div .icon {
+  font-size: 90px;
+  color: #30e3ca;
+}
+
+.score-box .score-text {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.quiz-box header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.quiz-box header .timer {
+  display: flex;
+  align-items: center;
+  background: #143f68;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.quiz-box header .timer .time-text {
+  font-size: 14px;
+}
+
+.quiz-box header .timer .time-second {
+  background: #f0a500;
+  border-radius: 3px;
+  padding: 3px;
+  margin-left: 3px;
+  width: 25px;
+  text-align: center;
+}
+
+.quiz-box header .time-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  /* width: 550px;  0 - 500 */
+  background: #f0a500;
+}
